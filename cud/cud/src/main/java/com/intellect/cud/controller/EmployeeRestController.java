@@ -32,7 +32,7 @@ public class EmployeeRestController {
 	@RequestMapping(value="/delete", method = RequestMethod.POST)
 	public ResponseEntity<EmployeeResponse> delete(@RequestBody Employee createEmployeeRequest){
 		logger.debug("Entering inside delete(@RequestBody Employee createEmployeeRequest) method");
-		return null;
+		return employeeService.deleteEmployee(createEmployeeRequest.getId());
 	}
 	
 }
